@@ -17,7 +17,20 @@
             $user="root";
             $pass="";
             $db="login";
-            $conn=mysqli_connect($host, $user, $pass, $db)
+            $conn=mysqli_connect($host, $user, $pass, $db);
+
+            if(isset($_POST['btnLogin'])){
+                $username=$_POST['username'];
+                $password=md5($_POST['password']);
+                $strQuery="SELECT * FROM login_tbl WHERE username='$username' AND password='$password';";
+
+                if($result=mysqli_query($conn,$strQuery)){
+                    if(!mysqli_num_rows($result)==1){
+                        echo "Inte inloggad";
+                        $_SESSION
+                    }
+                }
+            }
 
 
         ?>
