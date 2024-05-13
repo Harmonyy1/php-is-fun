@@ -21,13 +21,13 @@
             if($result=mysqli_query($conn,$strQuery)){ //Was it possible to question the database for this?
                 if(!mysqli_num_rows($result)==1){   //It was, now check if it didn't was just one row
                    echo "Inte inloggad!";  //Batty boy!
-                   $_SESSION['5sp']="";
+                   $_SESSION['id']="";
                    $_SESSION['5ddf']="";
                    $_SESSION['name']="";                   
                 }else{  //You made it! you are authorized!
                     $raden=mysqli_fetch_assoc($result);   //Get the row with data
                     echo "Välkommen ".strtoupper($raden['username']); //use this to print name
-                    $_SESSION['5sp']=$raden['userid'];
+                    $_SESSION['id']=$raden['userid'];
                     $_SESSION['5ddf']=$raden['userlevel'];
                     $_SESSION['name']=$raden['name'];
                     //$skrivutvariabeln=$_SESSION['name'];
