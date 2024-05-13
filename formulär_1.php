@@ -10,7 +10,7 @@
 <?php
 if(isset($_POST["submit"]))
 {
-    echo $_POST["name"]; 
+    echo htmlentities($_POST["name"]); 
     echo "<br>";
     echo $_POST["password"];
 }
@@ -20,8 +20,8 @@ else{
 
 ?>
     <form action="formulär_1.php" method="post">
-        <input type="text" name="name">
-        <input type="password" name="password">
+        <input type="text" name="name" maxlength="10" minlength="10">
+        <input type="password" name="password" maxlength="15" minlength="10">
         <input type="submit" name="submit" value="Logga in">
     </form>
     
