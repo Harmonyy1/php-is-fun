@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechAssistSolutions - Ärendehantering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Skapa ett nytt ärende</h1>
+        <form action="index.php" method="POST">
+            <label for="title">Titel</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Beskrivning</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="category">Kategori</label>
+            <select id="category" name="category">
+                <option value="Teknisk support">Teknisk support</option>
+                <option value="Fakturaförfrågningar">Fakturaförfrågningar</option>
+                <option value="Produktfrågor">Produktfrågor</option>
+                <option value="Allmänna förfrågningar">Allmänna förfrågningar</option>
+                <option value="Klagomål">Klagomål</option>
+            </select>
+
+            <label for="priority">Prioritet</label>
+            <select id="priority" name="priority">
+                <option value="Låg">Låg</option>
+                <option value="Medel">Medel</option>
+                <option value="Hög">Hög</option>
+                <option value="Akut">Akut</option>
+            </select>
+
+            <input type="submit" name="submit_ticket" value="Skicka in ärende">
+        </form>
+
+        <h1>Hantera ärenden</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titel</th>
+                    <th>Beskrivning</th>
+                    <th>Kategori</th>
+                    <th>Prioritet</th>
+                    <th>Status</th>
+                    <th>Åtgärd</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- PHP-koden kommer att generera rader här -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
